@@ -1,24 +1,27 @@
 {
-  "name": "starter-kit-v4",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "slo-spa-website",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OakHarbor/Starter-Kit-v4-Eleventy-.git"
+  "dependencies": {
+    "lucide-react": "^0.563.0",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OakHarbor/Starter-Kit-v4-Eleventy-/issues"
-  },
-  "homepage": "https://github.com/OakHarbor/Starter-Kit-v4-Eleventy-#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
