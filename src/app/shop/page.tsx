@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
-import { ShoppingCart, Plus, Search, Filter } from "lucide-react";
+import { ShoppingCart, Plus, Search, Filter, Lock } from "lucide-react";
 import Link from "next/link";
+
+const SHOP_PASSWORD = "slospa";
 
 const products = [
   {
@@ -122,6 +124,58 @@ export default function ShopPage() {
   const { items, addToCart, totalItems, totalPrice } = useCart();
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
+  const [password, setPassword] = useState("");
+  const [authenticated, setAuthenticated] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === SHOP_PASSWORD) {
+      setAuthenticated(true);
+      setPasswordError(false);
+    } else {
+      setPasswordError(true);
+    }
+  };
+
+  if (!authenticated) {
+    return (
+      <div className="min-h-screen bg-light flex items-center justify-center px-4">
+        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
+          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Lock className="w-8 h-8 text-primary" />
+          </div>
+          <h1 className="text-2xl font-bold text-primary mb-2">Shop Access</h1>
+          <p className="text-gray-600 mb-6">
+            This page is currently under construction. Enter the password to preview.
+          </p>
+          <form onSubmit={handlePasswordSubmit} className="space-y-4">
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setPasswordError(false);
+              }}
+              placeholder="Enter password"
+              className={`w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-secondary ${
+                passwordError ? "border-red-400" : "border-gray-300"
+              }`}
+            />
+            {passwordError && (
+              <p className="text-red-500 text-sm">Incorrect password. Please try again.</p>
+            )}
+            <button
+              type="submit"
+              className="w-full bg-primary hover:bg-dark text-white font-semibold py-3 rounded-lg transition"
+            >
+              Enter Shop
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   const filteredProducts = products.filter((product) => {
     const matchesSearch =

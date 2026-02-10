@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Menu, X, ShoppingCart } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -11,7 +11,6 @@ const navLinks = [
   { label: "Catalog", href: "/catalog" },
   { label: "Projects", href: "/projects" },
   { label: "Reviews", href: "/reviews" },
-  { label: "Shop", href: "/shop" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -81,20 +80,8 @@ export default function Header() {
             ))}
           </ul>
 
-          {/* Cart Icon & Mobile Menu Button */}
+          {/* Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            {/* Shopping Cart */}
-            <Link
-              href="/cart"
-              className="relative text-primary transition-colors hover:text-accent"
-              aria-label="Shopping cart"
-            >
-              <ShoppingCart className="h-6 w-6" />
-              <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-secondary text-xs font-bold text-primary">
-                0
-              </span>
-            </Link>
-
             {/* Mobile Hamburger Button */}
             <button
               type="button"
