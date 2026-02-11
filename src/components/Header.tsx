@@ -35,7 +35,7 @@ export default function Header() {
     >
       {/* Top Bar */}
       <div className="bg-primary text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-1 text-sm">
           <a
             href="tel:+18055443565"
             className="flex items-center gap-2 transition-colors hover:text-secondary"
@@ -54,14 +54,14 @@ export default function Header() {
 
       {/* Main Navigation */}
       <nav className="mx-auto max-w-7xl px-4">
-        <div className="flex items-center justify-between py-2">
+        <div className="flex items-center justify-between py-1">
           {/* Brand */}
           <Link href="/">
             <Image
               src="/images/logo-blue.svg"
               alt="SLO Spas - Authorized Jacuzzi Dealer"
-              width={150}
-              height={55}
+              width={120}
+              height={40}
               priority
             />
           </Link>

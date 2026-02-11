@@ -165,7 +165,6 @@ function ContactPageContent() {
                   <option value="Cold Plunge Quote">Cold Plunge Quote</option>
                   <option value="Covana Cover Quote">Covana Cover Quote</option>
                   <option value="Service Request">Service Request</option>
-                  <option value="Chemical Order">Chemical Order</option>
                 </select>
               </div>
 

@@ -39,10 +39,10 @@ export default function Home() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/shop"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-dark transition-all duration-300 text-lg"
             >
-              Shop Chemicals
+              Get a Free Quote
             </Link>
           </div>
         </div>

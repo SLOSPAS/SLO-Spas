@@ -13,7 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "SLO Spas | Authorized Jacuzzi Dealer - San Luis Obispo, CA",
   description:
-    "SLO County's exclusive Jacuzzi dealer. Hot tubs, infrared saunas, cold plunges, Covana covers, and spa chemicals. 20+ years of experience in San Luis Obispo.",
+    "SLO County's exclusive Jacuzzi dealer. Hot tubs, infrared saunas, cold plunges, and Covana covers. 20+ years of experience in San Luis Obispo.",
 };
 
 export default function RootLayout({
