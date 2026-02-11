@@ -1,16 +1,21 @@
 "use client";
 
-import { useState, FormEvent } from "react";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { useState, FormEvent, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 
-export default function ContactPage() {
+function ContactPageContent() {
+  const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: "",
-    message: "",
+    subject: searchParams.get("subject") || "",
+    message: searchParams.get("message") || "",
   });
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -18,9 +23,32 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    alert("Thank you! We'll be in touch soon.");
+    setSubmitting(true);
+    setError(false);
+
+    try {
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact",
+          ...formData,
+        }).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -43,7 +71,32 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Send Us a Message
             </h2>
+
+            {submitted ? (
+              <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
+                <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Message Sent!
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Thank you for reaching out. We&apos;ll get back to you as soon as possible.
+                </p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="text-secondary font-semibold hover:underline"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
+              <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden">
+                <label>
+                  Don&apos;t fill this out: <input name="bot-field" />
+                </label>
+              </p>
+
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   Name
@@ -132,14 +185,22 @@ export default function ContactPage() {
                 />
               </div>
 
+              {error && (
+                <p className="text-red-500 text-sm">
+                  Something went wrong. Please try again or call us at (805) 544-3565.
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+                disabled={submitting}
+                className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors disabled:opacity-60"
               >
                 <Send className="w-5 h-5" />
-                Send Message
+                {submitting ? "Sending..." : "Send Message"}
               </button>
             </form>
+            )}
           </div>
 
           {/* Right Column - Contact Info Cards */}
@@ -197,12 +258,6 @@ export default function ContactPage() {
                 >
                   Dane@slospas.com
                 </a>
-                <a
-                  href="mailto:Dane@slospas.com"
-                  className="text-secondary hover:underline block"
-                >
-                  Dane@slospas.com
-                </a>
               </div>
             </div>
 
@@ -236,23 +291,30 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Google Maps Embed Placeholder */}
+            {/* Google Maps Embed */}
             <div className="bg-white shadow rounded-xl overflow-hidden">
-              <div className="bg-gray-200 h-64 flex items-center justify-center">
-                <a
-                  href="https://maps.google.com/?q=3035+Broad+St+San+Luis+Obispo+CA+93401"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-secondary font-semibold hover:underline"
-                >
-                  <MapPin className="w-5 h-5" />
-                  View on Google Maps
-                </a>
-              </div>
+              <iframe
+                src="https://www.google.com/maps?q=SLO+Spas+3035+Broad+St+San+Luis+Obispo+CA+93401&output=embed"
+                width="100%"
+                height="256"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="SLO Spas location on Google Maps"
+              />
             </div>
           </div>
         </div>
       </section>
     </main>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense>
+      <ContactPageContent />
+    </Suspense>
   );
 }

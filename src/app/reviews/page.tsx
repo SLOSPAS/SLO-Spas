@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Star, Quote, ArrowRight } from "lucide-react";
+import { Star, Quote, ArrowRight, ExternalLink } from "lucide-react";
 
 export const metadata = {
   title: "Reviews | SLO Spas",
@@ -121,6 +121,24 @@ export default function ReviewsPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* See All Reviews on Google */}
+      <section className="py-12 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-gray-600 mb-4">
+            Want to read more? Check out all of our reviews on Google.
+          </p>
+          <a
+            href="https://www.google.com/maps/place/SLO+Spas/@35.2614,-120.6713,17z/data=!4m8!3m7!1s0x80ecf1a26979efeb:0x79e4e755e3a8e65!8m2!3d35.2614!4d-120.6713!9m1!1b1!16s%2Fg%2F1tdfv70p"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-secondary text-white font-semibold px-8 py-3 rounded-lg hover:bg-secondary/90 transition-colors duration-200"
+          >
+            See All Reviews on Google
+            <ExternalLink className="w-5 h-5" />
+          </a>
         </div>
       </section>
 
