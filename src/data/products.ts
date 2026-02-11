@@ -578,9 +578,9 @@ export function getProductBySlug(slug: string): Product | undefined {
 }
 
 export function getRelatedProducts(product: Product): Product[] {
-  return allProducts.filter(
-    (p) => p.category === product.category && p.slug !== product.slug
-  );
+  return allProducts
+    .filter((p) => p.category === product.category && p.slug !== product.slug)
+    .slice(0, 3);
 }
 
 export const categoryLabels: Record<ProductCategory, string> = {

@@ -72,7 +72,7 @@ export default function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="relative text-sm font-medium text-primary transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:text-accent hover:after:w-full"
+                  className="relative text-base font-medium text-primary transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-0.5 after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:text-accent hover:after:w-full"
                 >
                   {link.label}
                 </Link>
