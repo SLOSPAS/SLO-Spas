@@ -29,7 +29,7 @@ function ContactPageContent() {
     setError(false);
 
     try {
-      const response = await fetch("/netlify-form.html", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
