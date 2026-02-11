@@ -35,6 +35,7 @@ function ContactPageContent() {
         body: new URLSearchParams({
           "form-name": "contact",
           ...formData,
+          subject: `${formData.subject} — slospas.com`,
         }).toString(),
       });
 
