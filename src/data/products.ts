@@ -1,3 +1,38 @@
+/**
+ * SLO Spas Product Data
+ * Last updated: February 2026
+ *
+ * HOW TO UPDATE PRODUCT INFO:
+ *
+ * Hot Tubs (Jacuzzi) — grouped by series (J-200, J-300, J-400, J-500, J-LXL)
+ *   Browse all: https://www.jacuzzi.com/en-us/hot-tubs/browse-all-hot-tubs
+ *   Individual models use the pattern: https://www.jacuzzi.com/en-us/j{model}/J{model}-MY{year}.html
+ *   Example: https://www.jacuzzi.com/en-us/j509/J509-MY26.html (J-509, model year 2026)
+ *   The first digit tells you the series — J-509 → J-500 Series
+ *
+ * Swim Spas (Jacuzzi)
+ *   Browse all: https://www.jacuzzi.com/en-us/swim-spas/browse-all-swim-spas
+ *
+ * Indoor Saunas (Jacuzzi)
+ *   Individual models: https://www.jacuzzi.com/en-us/{capacity}-person/JS-{size}i.html
+ *   Examples: JS-1i, JS-2i, JS-3i
+ *
+ * Outdoor Saunas (Clearlight / Jacuzzi)
+ *   https://infraredsauna.com/sanctuary-outdoor-two-person/
+ *   https://infraredsauna.com/sanctuary-outdoor-five-person/
+ *
+ * Cold Plunge (Jacuzzi Kodiak)
+ *   https://www.jacuzzi.com/en-us/cold-plunges/
+ *
+ * Covana Automated Covers
+ *   https://covana.com/en/produit/oasis/
+ *   https://covana.com/en/produit/oasis-midnight/
+ *   https://covana.com/en/produit/evolution/
+ *   https://covana.com/en/produit/legend/
+ *
+ * Product images go in /public/images/products/{category}/
+ */
+
 export type ProductCategory =
   | "hot-tubs"
   | "swim-spas"
