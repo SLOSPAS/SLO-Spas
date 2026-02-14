@@ -126,7 +126,7 @@ export const jacuzziProducts: Product[] = [
     description:
       "Premium open-seated spas with infrared and red light therapy, True Water nanobubble technology, and SmartTub app control. Move freely between ergonomic seats and enjoy legendary Jacuzzi hydrotherapy with modern design.",
     longDescription:
-      "The J-400 Collection combines elegant styling with pioneering wellness technology. The open-seated design gives you freedom to move between ergonomic positions, each engineered for targeted relief. The FX-IR lounge seat pairs hydromassage with near-infrared and red light therapy for deep tissue recovery. True Water nanobubble technology delivers water that\u2019s 99.999% chlorine-free, while 5-stage filtration means fewer water changes. SmartTub app control lets you monitor and adjust your spa from anywhere, and Smart Heat Mode reduces standby power by up to 25%. Multi-layer insulation ensures quiet, efficient operation, and the heat-pump-ready design supports energy-efficient heating and cooling year-round.",
+      "The J-400 Collection is the pinnacle of Jacuzzi engineering. The patent-pending FX-IR therapy seat pairs hydromassage with infrared and red light therapy targeting the lower back for deep rejuvenation \u2014 Jacuzzi is the first and only brand to offer this technology. True Water nanobubble technology continuously releases trillions of oxygen-filled bubbles to scrub away contaminants and deliver sparkling, 99.999% chlorine-free water. SmartTub integration provides remote control through your phone, Alexa, or Siri using a cellular connection that\u2019s simpler and more reliable than Wi-Fi, while Smart Heat Mode reduces standby energy consumption by up to 25%. The open-seated design gives you freedom to move between ergonomic positions, each engineered for targeted relief. An infinity-edge waterfall, MX jets for lower back massage, and RX specialty jets for full-body relaxation complete the experience. ClearRay Active Oxygen combines ozone and UV-C for hands-free water care with 5-stage filtration.",
     capacity: "4-7 seats",
     image: "/images/products/hottubs/j400-series.png",
     models: "J-404L, J-408, J-408L",
@@ -177,37 +177,6 @@ export const jacuzziProducts: Product[] = [
       { label: "Therapy", value: "Infrared + Red Light" },
       { label: "Modes", value: "5 Experience Modes" },
       { label: "Water Care", value: "True Water + 6-Stage" },
-    ],
-  },
-  {
-    name: "J-LXL",
-    slug: "j-lxl",
-    category: "hot-tubs",
-    brand: "Jacuzzi",
-    description:
-      "The flagship Jacuzzi spa. Patent-pending FX-IR therapy seat combines infrared, red light, and hydromassage for deep rejuvenation. True Water nanobubble technology, SmartTub control via phone or voice assistant, infinity-edge waterfall, and 39 precision jets.",
-    longDescription:
-      "The J-LXL is the pinnacle of Jacuzzi engineering. The patent-pending FX-IR therapy seat pairs hydromassage with infrared and red light therapy targeting the lower back for deep rejuvenation \u2014 Jacuzzi is the first and only brand to offer this technology. True Water nanobubble technology continuously releases trillions of oxygen-filled bubbles to scrub away contaminants and deliver sparkling, 99.999% chlorine-free water. SmartTub integration provides remote control through your phone, Alexa, or Siri using a cellular connection that\u2019s simpler and more reliable than Wi-Fi, while Smart Heat Mode reduces standby energy consumption by up to 25%. Six ergonomic seating positions plus a full-body lounge, an infinity-edge waterfall, MX jets for lower back massage, and RX specialty jets for full-body relaxation complete the experience. ClearRay Active Oxygen combines ozone and UV-C for hands-free water care with 5-stage filtration.",
-    capacity: "6 seats + lounge",
-    image: "/images/products/hottubs/j-lxl.jpg",
-    specs: "89\"L x 89\"W x 34\"H | 330 gal | 914 lbs dry",
-    features: [
-      "Patent-pending FX-IR seat \u2014 infrared, red light, and hydromassage",
-      "True Water nanobubble technology \u2014 99.999% chlorine-free",
-      "SmartTub control via phone, Alexa, or Siri (cellular)",
-      "Smart Heat Mode reduces standby power by up to 25%",
-      "39 precision jets with MX and RX therapy seats",
-      "ClearRay Active Oxygen (ozone + UV-C) with 5-stage filtration",
-      "Infinity-edge waterfall with LED lighting",
-      "Two 5.1 HP pumps plus circulation pump",
-      "ProClarity and ProCatch filtration system",
-      "Heat-pump ready for year-round efficiency",
-    ],
-    highlights: [
-      { label: "Jets", value: "39" },
-      { label: "Therapy", value: "FX-IR (Patent Pending)" },
-      { label: "Water", value: "330 gallons" },
-      { label: "Control", value: "SmartTub + Voice" },
     ],
   },
 ];
