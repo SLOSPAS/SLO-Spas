@@ -158,7 +158,7 @@ export const jacuzziProducts: Product[] = [
     longDescription:
       "The J-500 Collection redefines what a hot tub can be. Five immersive experience modes orchestrate hydromassage, infrared therapy, and ambient lighting into coordinated wellness sessions, with three intensity levels from gentle relaxation to deep therapeutic massage. Specialty seats include infrared therapy with four IR lights for full-back coverage, Captain\u2019s chairs, MX deep-tissue seats, RX spinning therapy seats, ProAir neck and shoulder seats, and FX spiral-action massage seats. True Water nanobubble technology keeps water 99.999% chlorine-free, and 6-stage filtration with a space-saving design minimizes maintenance. SmartTub app integration lets each family member save personal profiles for jet preferences, lighting, and audio \u2014 including a curated collection of relaxation soundscapes through adjustable surround-sound pillows. Responsive ambient lighting activates as you approach.",
     capacity: "7-9 seats",
-    image: "/images/products/hottubs/j500-series.png",
+    image: "/images/products/swimspas/JD-l-Oct-J5-Key-Visual-thin-lines--approved-asset-version-.png",
     models: "J-508, J-508L, J-509",
     features: [
       "Five immersive experience modes (hydromassage + IR + lighting)",
