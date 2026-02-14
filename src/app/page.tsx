@@ -20,7 +20,7 @@ export default function Home() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-dark/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-dark/40" />
         <div className="relative container mx-auto px-4 text-center max-w-4xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
             Your Backyard Wellness Sanctuary
