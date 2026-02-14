@@ -152,7 +152,7 @@ export default function CatalogPage() {
           <p className="text-muted mb-8 ml-16">
             From entry-level to flagship luxury, find the perfect spa for your home.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {jacuzziProducts.map((product) => (
               <ProductCard key={product.slug} product={product} />
             ))}
