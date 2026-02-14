@@ -89,7 +89,7 @@ export default function Home() {
               <div className="bg-white rounded-2xl shadow-md overflow-hidden text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="relative aspect-video">
                   <Image
-                    src="/images/products/saunas/clearlight-od5.jpg"
+                    src="/images/OD5.jpeg"
                     alt="Clearlight Sanctuary Outdoor 5 infrared sauna"
                     fill
                     className="object-cover"
