@@ -26,9 +26,9 @@ export default function Home() {
             Your Backyard Wellness Sanctuary
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            SLO County&apos;s exclusive Jacuzzi dealer. Hot tubs, infrared
-            saunas, cold plunges, and Covana automated covers for total body
-            wellness.
+            SLO County&apos;s exclusive Jacuzzi dealer. Hot tubs, swim spas,
+            infrared saunas, cold plunges, and Covana automated covers for
+            total body wellness.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
