@@ -14,8 +14,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative text-white py-24 md:py-32">
         <Image
-          src="/images/landing.jpg"
-          alt="Jacuzzi hot tub overlooking a river at sunset"
+          src="/images/JHT_J508_Platinum_Flax_Seaside_SRGB-Full.jpg"
+          alt="Jacuzzi J-508 hot tub in a seaside setting"
           fill
           className="object-cover"
           priority
@@ -63,8 +63,8 @@ export default function Home() {
               <div className="bg-white rounded-2xl shadow-md overflow-hidden text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="relative aspect-video">
                   <Image
-                    src="/images/BA1_9096.jpg"
-                    alt="Jacuzzi hot tub showroom display"
+                    src="/images/JD-l-Oct-J5-Key-Visual-thin-lines--approved-asset-version-.png"
+                    alt="Jacuzzi hot tub lifestyle"
                     fill
                     className="object-cover"
                   />
