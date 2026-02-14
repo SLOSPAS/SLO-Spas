@@ -93,9 +93,9 @@ export const jacuzziProducts: Product[] = [
     category: "hot-tubs",
     brand: "Jacuzzi",
     description:
-      "Comfort-first engineering with premium PowerPro jets, the exclusive HydroSoothe no-splash massage pillow, and an advanced touchscreen control panel. Eight models from a compact 3-seater to a full-size spa for seven.",
+      "Jacuzzi's flagship series. Comfort-first engineering with premium PowerPro jets, the exclusive HydroSoothe no-splash massage pillow, and an advanced touchscreen control panel. Eight models from a compact 3-seater to a full-size spa for seven.",
     longDescription:
-      "The J-300 Collection puts comfort at the forefront of every design decision. PowerPro jets deliver targeted hydrotherapy to specific muscle groups, while the exclusive HydroSoothe pillow provides a soothing stream of water to the neck and shoulders \u2014 a feature found only in this collection. Select lounge models include the ProAir seat with exclusive bubbling BX jets that target the calves for full-body relief. New for 2025, every J-300 features an upgraded touchscreen control panel, ClearRay Active Oxygen water purification, the cascading Water Rainbow waterfall, and optional True Water nanobubble technology. ProLite energy-efficient LED lighting illuminates above and below the water, behind pillows, and under beverage coasters.",
+      "The J-300 Collection is Jacuzzi's flagship series, putting comfort at the forefront of every design decision. PowerPro jets deliver targeted hydrotherapy to specific muscle groups, while the exclusive HydroSoothe pillow provides a soothing stream of water to the neck and shoulders \u2014 a feature found only in this collection. Select lounge models include the ProAir seat with exclusive bubbling BX jets that target the calves for full-body relief. New for 2025, every J-300 features an upgraded touchscreen control panel, ClearRay Active Oxygen water purification, the cascading Water Rainbow waterfall, and optional True Water nanobubble technology. ProLite energy-efficient LED lighting illuminates above and below the water, behind pillows, and under beverage coasters.",
     capacity: "3-7 seats",
     image: "/images/products/hottubs/j300-series.jpg",
     models: "J-315, J-325, J-335, J-345, J-355, J-365, J-375, J-385",
