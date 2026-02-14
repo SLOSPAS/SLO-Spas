@@ -61,16 +61,33 @@ export default async function ProductDetailPage({
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Product Image */}
-            <div className="relative aspect-square bg-gray-50 rounded-2xl overflow-hidden">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                className="object-contain p-8"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
+            {/* Product Images */}
+            <div className="space-y-4">
+              <div className="relative aspect-square bg-gray-50 rounded-2xl overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-contain p-8"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              {product.additionalImages && product.additionalImages.length > 0 && (
+                <div className="grid grid-cols-2 gap-4">
+                  {product.additionalImages.map((img, i) => (
+                    <div key={i} className="relative aspect-video bg-gray-50 rounded-xl overflow-hidden">
+                      <Image
+                        src={img}
+                        alt={`${product.name} - image ${i + 2}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 50vw, 25vw"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Product Info */}

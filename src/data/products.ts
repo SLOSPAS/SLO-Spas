@@ -50,6 +50,7 @@ export interface Product {
   longDescription?: string;
   capacity: string;
   image: string;
+  additionalImages?: string[];
   specs?: string;
   models?: string;
   features: string[];
@@ -222,7 +223,8 @@ export const swimSpaProducts: Product[] = [
     longDescription:
       "Jacuzzi Swim Spas combine a full-length swimming pool, fitness center, and hydrotherapy spa into a single all-season unit. The PowerPro PX swim jets and PowerActive AX jets produce a smooth, powerful current for in-place swimming, while the SteadySwim buoyancy jet keeps your body aligned during exercise. The SmoothSwim shell is contoured at the hips to minimize wave reflection and keep you centered in your lane. Dual-temperature models (J-19DT series) feature independent electronics so you can swim in one zone while someone relaxes in the heated spa section \u2014 each at its own temperature. The FX-IR seat on select models adds infrared and red light therapy with calf and foot massage after your workout. Every swim spa includes ClearRay Active Oxygen filtration, ProFusion acrylic shell, full-foam insulation, galvanized steel frame, and a ProLast cover that\u2019s 25% lighter than vinyl and UV/water-resistant. Premium LED lighting, illuminated waterfall, and synthetic wood cabinetry complete the package.",
     capacity: "Multiple sizes",
-    image: "/images/products/swimspas/swim-spa-lifestyle.jpg",
+    image: "/images/products/swimspas/JD-l-Oct-J5-Key-Visual-thin-lines--approved-asset-version-.png",
+    additionalImages: ["/images/products/swimspas/swim-spa-lifestyle.jpg"],
     models:
       "J-12 Flow, J-13 PowerPlay, J-14 PowerPro, J-16 PowerActive, J-16 PowerPro, J-19 PowerActive, J-19DT PowerPro, J-19DT PowerActive",
     features: [

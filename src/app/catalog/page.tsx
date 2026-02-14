@@ -136,7 +136,7 @@ export default function CatalogPage() {
       </section>
 
       {/* Jacuzzi Hot Tubs */}
-      <section className="py-16 px-4">
+      <section id="hot-tubs" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
             <div className="bg-blue-100 text-blue-700 p-3 rounded-xl">
@@ -179,7 +179,7 @@ export default function CatalogPage() {
       </section>
 
       {/* Infrared Saunas */}
-      <section className="py-16 px-4">
+      <section id="saunas" className="py-16 px-4 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="bg-amber-100 text-amber-700 p-3 rounded-xl">
@@ -212,7 +212,7 @@ export default function CatalogPage() {
       </section>
 
       {/* Jacuzzi Cold Plunge */}
-      <section className="py-16 px-4 bg-white">
+      <section id="cold-plunge" className="py-16 px-4 bg-white scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="bg-cyan-100 text-cyan-700 p-3 rounded-xl">
@@ -230,7 +230,7 @@ export default function CatalogPage() {
       </section>
 
       {/* Covana Automated Covers */}
-      <section className="py-16 px-4 bg-white">
+      <section id="covana" className="py-16 px-4 bg-white scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="bg-emerald-100 text-emerald-700 p-3 rounded-xl">

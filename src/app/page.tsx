@@ -59,11 +59,11 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {/* Jacuzzi Hot Tubs */}
-            <Link href="/catalog" className="group">
+            <Link href="/catalog#hot-tubs" className="group">
               <div className="bg-white rounded-2xl shadow-md overflow-hidden text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="relative aspect-video">
                   <Image
-                    src="/images/JD-l-Oct-J5-Key-Visual-thin-lines--approved-asset-version-.png"
+                    src="/images/products/swimspas/JD-l-Oct-J5-Key-Visual-thin-lines--approved-asset-version-.png"
                     alt="Jacuzzi hot tub lifestyle"
                     fill
                     className="object-cover"
@@ -85,12 +85,12 @@ export default function Home() {
             </Link>
 
             {/* Infrared Saunas */}
-            <Link href="/catalog" className="group">
+            <Link href="/catalog#saunas" className="group">
               <div className="bg-white rounded-2xl shadow-md overflow-hidden text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="relative aspect-video">
                   <Image
-                    src="/images/products/SaunaShow.jpg"
-                    alt="Infrared sauna showroom"
+                    src="/images/products/saunas/clearlight-od5.jpg"
+                    alt="Clearlight Sanctuary Outdoor 5 infrared sauna"
                     fill
                     className="object-cover"
                   />
@@ -111,7 +111,7 @@ export default function Home() {
             </Link>
 
             {/* Jacuzzi Cold Plunge */}
-            <Link href="/catalog" className="group">
+            <Link href="/catalog#cold-plunge" className="group">
               <div className="bg-white rounded-2xl shadow-md overflow-hidden text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="relative aspect-video">
                   <Image
@@ -137,7 +137,7 @@ export default function Home() {
             </Link>
 
             {/* Covana Automated Covers */}
-            <Link href="/catalog" className="group">
+            <Link href="/catalog#covana" className="group">
               <div className="bg-white rounded-2xl shadow-md overflow-hidden text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <div className="relative aspect-video">
                   <Image
