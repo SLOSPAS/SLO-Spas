@@ -41,7 +41,7 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                SLO Spas was founded in 1986 by Paul Hodson, who saw an
+                SLO Spas was founded in 1986 by Paul Hodgson, who saw an
                 opportunity to bring premium wellness products to San Luis
                 Obispo County. What began as one man&apos;s commitment to
                 helping his neighbors live healthier, happier lives quickly grew
@@ -49,7 +49,7 @@ export default function AboutPage() {
                 wellness.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Today, Paul&apos;s son Dane Hodson carries the family legacy
+                Today, Paul&apos;s son Dane Hodgson carries the family legacy
                 forward. Raised in the business and passionate about the same
                 values his father instilled &mdash; honest service, quality
                 products, and genuine care for every customer &mdash; Dane

@@ -184,7 +184,7 @@ export default function Home() {
                 A Family Legacy Since 1986
               </h3>
               <p className="text-gray-600">
-                Founded by Paul Hodson and now led by his son Dane, nearly 40
+                Founded by Paul Hodgson and now led by his son Dane, nearly 40
                 years of family expertise means unmatched knowledge and a
                 commitment to quality that spans generations.
               </p>
