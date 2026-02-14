@@ -68,7 +68,7 @@ export const jacuzziProducts: Product[] = [
     longDescription:
       "The J-200 Collection makes Jacuzzi quality accessible with proven jet placement and a complete whirlpool experience. Every model features ClearRay UV-C water purification for crystal-clear water with less sanitizer, SmartTub connectivity for remote monitoring and energy savings, and UV-resistant ProEndure cabinetry that stays beautiful with zero maintenance. Ergonomic seats, plush pillows, ambient multi-color LED lighting, and integrated cup holders round out a spa designed to deliver years of reliable enjoyment.",
     capacity: "3-7 seats",
-    image: "/images/products/hottubs/j200-series.png",
+    image: "/images/products/hottubs/0233_jacuzzi_04_view_29_J-225_Silver-Pearl_Pecan-SRGB-Full.jpg",
     models: "J-215, J-225, J-235, J-245, J-285",
     features: [
       "Classic and ClassicPro jets with proven ergonomic placement",
