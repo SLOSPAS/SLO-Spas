@@ -58,7 +58,7 @@ export default function Header() {
           {/* Brand */}
           <Link href="/">
             <Image
-              src="/images/logo-blue.svg"
+              src="/images/SLO_Spas_BW_FINAL.png"
               alt="SLO Spas - Authorized Jacuzzi Dealer"
               width={120}
               height={40}

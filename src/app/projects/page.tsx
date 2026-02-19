@@ -2,7 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Projects | SLO Spas",
+  title: "Installation Gallery — Hot Tub & Spa Projects",
+  description:
+    "Browse our gallery of hot tub and spa installations across the Central Coast. See how SLO Spas transforms backyards with Jacuzzi hot tubs, swim spas, saunas, and custom setups in San Luis Obispo County.",
+  alternates: {
+    canonical: "https://slospas.com/projects",
+  },
 };
 
 const projects = [

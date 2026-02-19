@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { Star, Quote, ArrowRight, ExternalLink } from "lucide-react";
+import StructuredData from "@/components/StructuredData";
 
 export const metadata = {
-  title: "Reviews | SLO Spas",
+  title: "Customer Reviews — 5-Star Rated Hot Tub Dealer",
   description:
-    "Read what our customers have to say about their experience with SLO Spas. 5-star reviews from real customers on the Central Coast.",
+    "Read 5-star reviews from real SLO Spas customers on the Central Coast. See why families in San Luis Obispo trust us for Jacuzzi hot tubs, saunas, and spa service since 1986.",
+  alternates: {
+    canonical: "https://slospas.com/reviews",
+  },
 };
 
 const reviews = [
@@ -44,8 +48,33 @@ export default function ReviewsPage() {
   const averageRating = 5.0;
   const totalReviews = reviews.length;
 
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://slospas.com/#business",
+    name: "SLO Spas",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      bestRating: "5",
+      worstRating: "1",
+      reviewCount: String(totalReviews),
+    },
+    review: reviews.map((r) => ({
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(r.rating),
+        bestRating: "5",
+      },
+      author: { "@type": "Person", name: r.name },
+      reviewBody: r.text,
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-light">
+      <StructuredData data={reviewSchema} />
       {/* Page Header */}
       <section className="bg-dark text-white py-20 text-center">
         <div className="max-w-4xl mx-auto px-4">

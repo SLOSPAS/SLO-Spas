@@ -20,9 +20,12 @@ import {
 import type { Product } from "@/data/products";
 
 export const metadata = {
-  title: "Catalog | SLO Spas",
+  title: "Product Catalog — Hot Tubs, Swim Spas, Saunas & More",
   description:
-    "Browse the full SLO Spas product catalog featuring Jacuzzi hot tubs, infrared saunas, the Jacuzzi Kodiak Cold Plunge, and Covana automated spa covers.",
+    "Browse Jacuzzi hot tubs, swim spas, Clearlight infrared saunas, Jacuzzi cold plunges, and Covana automated spa covers at SLO Spas in San Luis Obispo. Find the perfect wellness product for your backyard.",
+  alternates: {
+    canonical: "https://slospas.com/catalog",
+  },
 };
 
 function ProductCard({ product }: { product: Product }) {

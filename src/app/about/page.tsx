@@ -4,9 +4,12 @@ import { Award, Heart, Users, MapPin, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | SLO Spas",
+  title: "About Us",
   description:
-    "Learn about SLO Spas — a family business since 1986. SLO County's exclusive Jacuzzi dealer with nearly 40 years of experience creating backyard wellness sanctuaries in San Luis Obispo.",
+    "SLO Spas is a family-owned Jacuzzi dealership in San Luis Obispo since 1986. Founded by Paul Hodgson, now led by son Dane — nearly 40 years of expert hot tub sales, installation, and service on the Central Coast.",
+  alternates: {
+    canonical: "https://slospas.com/about",
+  },
 };
 
 export default function AboutPage() {

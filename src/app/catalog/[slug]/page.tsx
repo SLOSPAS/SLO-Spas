@@ -10,6 +10,7 @@ import {
   contactSubjects,
 } from "@/data/products";
 import type { Metadata } from "next";
+import StructuredData from "@/components/StructuredData";
 
 export function generateStaticParams() {
   return allProducts.map((product) => ({
@@ -24,11 +25,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug);
-  if (!product) return { title: "Product Not Found | SLO Spas" };
+  if (!product) return { title: "Product Not Found" };
 
   return {
-    title: `${product.name} | SLO Spas`,
-    description: `${product.name} by ${product.brand} — ${product.description} Available at SLO Spas in San Luis Obispo.`,
+    title: `${product.name} by ${product.brand}`,
+    description: `${product.name} by ${product.brand} — ${product.description} Available at SLO Spas in San Luis Obispo, CA. Request a free quote today.`,
+    alternates: {
+      canonical: `https://slospas.com/catalog/${product.slug}`,
+    },
+    openGraph: {
+      title: `${product.name} | SLO Spas`,
+      description: product.description,
+      images: [{ url: product.image, alt: product.name }],
+    },
   };
 }
 
@@ -46,8 +55,53 @@ export default async function ProductDetailPage({
   const contactMessage = `I'm interested in the ${product.name}. Please send me more information.`;
   const contactHref = `/contact?subject=${encodeURIComponent(contactSubject)}&message=${encodeURIComponent(contactMessage)}`;
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.description,
+    brand: { "@type": "Brand", name: product.brand },
+    image: `https://slospas.com${product.image}`,
+    category: categoryLabels[product.category],
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "LocalBusiness",
+        name: "SLO Spas",
+        url: "https://slospas.com",
+      },
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://slospas.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Catalog",
+        item: "https://slospas.com/catalog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.name,
+        item: `https://slospas.com/catalog/${product.slug}`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-light">
+      <StructuredData data={[productSchema, breadcrumbSchema]} />
       {/* Hero Section */}
       <section className="bg-white">
         <div className="max-w-6xl mx-auto px-4 py-8">

@@ -7,6 +7,17 @@ import {
   Truck,
   Wrench,
 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "SLO Spas | Authorized Jacuzzi Dealer in San Luis Obispo, CA",
+  description:
+    "SLO County's exclusive authorized Jacuzzi dealer since 1986. Shop hot tubs, swim spas, infrared saunas, cold plunges, and Covana automated spa covers. Free quotes, professional installation, and warranty service in San Luis Obispo.",
+  alternates: {
+    canonical: "https://slospas.com",
+  },
+};
 
 export default function Home() {
   return (
